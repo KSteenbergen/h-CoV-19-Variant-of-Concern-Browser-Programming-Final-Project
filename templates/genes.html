@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gene Results</title>
+  
+  <!-- Change this out for CSS and JS as needed -->
+  <link rel="stylesheet" type="text/css" href="css/search_product.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <h1>Display of Genes and their Mutations</h1>
+    <p>This includes a tables that are populated for each gene  - Same query - different filtering.
+        JQuery UI - Accordian table drop down - may need to add names to each table row. 
+        I'd like the headers to be frozen and only the bottom portion open up.
+        Will probably need to add identifiers for the different elements for CSS
+        Change Alternative name to be "Alternative Gene Name"
+    </p><br>
+        
+    <h3>ORF1AB Gene</h3>  
+    <table name = "ORF1AB">
+    <tr>
+        <th>Gene</th>
+        <th>Alternative name</th> 
+        <th>loci (blank one - or span 2 columns</th>
+        <th></th>
+        <th>Gene Length (nt)</th>
+        <th>Protein Product</th>
+        <th>Polypeptide Length (aa)</th> 
+    </tr>
+    {% for entry in reference if entry.gene=='ORF1AB' %}
+    <tr>
+        <td>{{ entry.gene }}</td>
+        <td>{{ entry.altname }}</td>
+        <td>{{ entry.begin }}</td>
+        <td>{{ entry.end }}</td>
+        <td>{{ entry.length }}</td>
+        <td>{{ entry.product }}</td>
+        <td>{{ entry.aa_length }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th>Variant</th>
+        <th>Country of Origin</th> 
+        <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+        <th>Event</th>
+    </tr>
+    {% for entry in gene_mutations if entry.gene=='ORF1AB' %}
+    <tr>
+        <td>{{ entry.variant }}</td>
+        <td>{{ entry.country }}</td>
+        <td>{{ entry.mutation }}</td>
+        <td>{{ entry.event }}</td>
+    </tr>
+    {% endfor %}
+    </table><br>
+    
+    <h3>Spike Gene</h3>
+    <table name = "Spike">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='Spike' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='Spike' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>ORF3 Gene</h3>
+    <table name = "ORF3">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='ORF3' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='ORF3' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+
+    <h3>Envelope Gene</h3>  
+    <table name = "E">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='E' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='E' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>Membrane Gene</h3>  
+    <table name = "M">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='M' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='M' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>ORF6 Gene</h3>  
+    <table name = "ORF6">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='ORF6' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='ORF6' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    
+    <h3>ORF7A Gene</h3>  
+    <table name = "ORF7A">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='ORF7A' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='ORF7A' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>ORF7B Gene</h3>  
+    <table name = "ORF7B">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='ORF7B' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='ORF7B' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>ORF8 Gene</h3>  
+    <table name = "ORF8">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='ORF8' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='ORF8' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+    <h3>Nucleocapsid Gene</h3>  
+    <table name = "N">
+        <tr>
+            <th>Gene</th>
+            <th>Alternative name</th> 
+            <th>loci (blank one - or span 2 columns</th>
+            <th></th>
+            <th>Gene Length (nt)</th>
+            <th>Protein Product</th>
+            <th>Polypeptide Length (aa)</th> 
+        </tr>
+        {% for entry in reference if entry.gene=='N' %}
+        <tr>
+            <td>{{ entry.gene }}</td>
+            <td>{{ entry.altname }}</td>
+            <td>{{ entry.begin }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.length }}</td>
+            <td>{{ entry.product }}</td>
+            <td>{{ entry.aa_length }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Variant</th>
+            <th>Country of Origin</th> 
+            <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+            <th>Event</th>
+        </tr>
+        {% for entry in gene_mutations if entry.gene=='N' %}
+        <tr>
+            <td>{{ entry.variant }}</td>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.mutation }}</td>
+            <td>{{ entry.event }}</td>
+        </tr>
+        {% endfor %}
+    </table><br>
+    
+
+<p>I'd like to thank sponsers ... </p>
+</body>
+</html>

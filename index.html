@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>h-CoV-19 Variant Browser</title>
+  
+  <!-- Change this out for CSS and JS as needed -->
+  <link rel="stylesheet" type="text/css" href="css/search_product.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <!-- This would be the header and information -->
+  <h1>h-CoV-19 Variants of Concern Browser</h1>
+  <p>
+      Insert some awesome text here about how to run, and maybe some intro information
+      This can include a little background on COVID and the Variants of Concern (VOC)
+      How they were chosen, time stamp, etc. 
+      Also, some instructions on how to use.
+      Might not need both checkboxes - The decision is made with the submit button - but there
+      could be a jQuery widget that could be included for added interactivity. 
+  </p>
+  <!-- This would include the form elements
+            What would you like to do:  Compare or Show all genes? -->
+  <form name="var_compare" method ='post' action='./compare_query.cgi'>
+    <input type="checkbox" name="compare" id="compare">
+    <label for="compare"> Variant Comparison</label><br>
+    
+    <!-- Will probably need to change the values for the query? -->
+    <label for="VarA"> Choose two variants to compare:</label><br>  
+    <select name="VarA" id="VarA">
+        <option value="B.1.1.7">B.1.1.7 (UK)</option>
+        <option value="B.1.351">B.1.351 (South Africa)</option>
+        <option value="P.1">P.1 (Brazil)</option>
+        <option value="A.23.1">A.23.1 (Multiple)</option>
+        <option value="B.1.525">B.1.525 (Botswana)</option>
+    </select>
+
+    <select name="VarB" id="VarB">
+        <option value="B.1.1.7">B.1.1.7 (UK)</option>
+        <option value="B.1.351">B.1.351 (South Africa)</option>
+        <option value="P.1">P.1 (Brazil)</option>
+        <option value="A.23.1">A.23.1 (Multiple)</option>
+        <option value="B.1.525">B.1.525 (Botswana)</option>
+     </select>
+    <input name="submit" type="submit" id="submit" value="submit"> <br>  
+  </form>
+  
+  <h2>This is another form</h2>
+  <form name='gene_list' method='get' action='./genemt_query.cgi'>
+    <input type="checkbox" name="display" id="display" value="display">
+    <label for="display"> Display all the Genes</label><br>
+    <input name="submit" type="submit" id="submit" value="Submit"><br><br>
+  </form>
+ 
+  
+  <p>I'd like to thank sponsers ... </p>
+  
+</div>
+</body>
+
+</html>
