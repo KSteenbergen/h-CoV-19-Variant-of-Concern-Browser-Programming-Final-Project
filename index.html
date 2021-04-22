@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <title>h-CoV-19 Variant Browser</title>
   
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
   <!-- Change this out for CSS and JS as needed -->
   <link rel="stylesheet" type="text/css" href="css/search_product.css" />
   <link rel="stylesheet" href="css/normalize.css">
@@ -21,15 +26,47 @@
       This can include a little background on COVID and the Variants of Concern (VOC)
       How they were chosen, time stamp, etc. 
       Also, some instructions on how to use.
-      Might not need both checkboxes - The decision is made with the submit button - but there
-      could be a jQuery widget that could be included for added interactivity. 
+      jQuery widget that could be included for added interactivity - want no icons - not working I dont't like how the circles are behind the option  
+      Can delete other form when ready. 
+      Another issue is to not allow for the same variant to be selected twice.
   </p>
+  <h3>Form to Compare two Variants:</h3>
+  <form name="tester" method ='post' action='./compare_query.cgi'>
+    <div class="widget">
+      <fieldset>
+        <legend>Select a Variant: </legend>
+        <label for="B.1.1.7">B.1.1.7 (UK)</label>
+        <input type="radio" name="VarA" id="B.1.1.7" value="B.1.1.7">
+        <label for="P.1">P.1 (Brazil)</label>
+        <input type="radio" name="VarA" id="P.1" value="P.1">
+        <label for="B.1.351">B.1.351 (South Africa)</label>
+        <input type="radio" name="VarA" id="B.1.351" value= "B.1.351">
+        <label for="B.1.525">B.1.525 (Botswana)</label>
+        <input type="radio" name="VarA" id="B.525" value= "B.1.525">
+        <label for="A.23.1">A.23.1 (Multiple)</label>
+        <input type="radio" name="VarA" id="A.23.1" value= "A.23.1">
+      </fieldset>
+      <fieldset>
+        <legend>Select a Comparison Variant: </legend>
+        <label for="B.1.1.7">B.1.1.7 (UK)</label>
+        <input type="radio" name="VarB" id="B.1.1.7" value="B.1.1.7">
+        <label for="P.1">P.1 (Brazil)</label>
+        <input type="radio" name="VarB" id="P.1" value="P.1">
+        <label for="B.1.351">B.1.351 (South Africa)</label>
+        <input type="radio" name="VarB" id="B.1.351" value= "B.1.351">
+        <label for="B.1.525">B.1.525 (Botswana)</label>
+        <input type="radio" name="VarB" id="B.525" value= "B.1.525">
+        <label for="A.23.1">A.23.1 (Multiple)</label>
+        <input type="radio" name="VarB" id="A.23.1" value= "A.23.1">
+      </fieldset>
+      <input name="submit" type="submit" id="submit" value="submit"> <br>
+    </div>
+  </form>
+  
   <!-- This would include the form elements
             What would you like to do:  Compare or Show all genes? -->
+  <h3>This is the old form that works - remove when comfortable</h3>
   <form name="var_compare" method ='post' action='./compare_query.cgi'>
-    <input type="checkbox" name="compare" id="compare">
-    <label for="compare"> Variant Comparison</label><br>
-    
     <!-- Will probably need to change the values for the query? -->
     <label for="VarA"> Choose two variants to compare:</label><br>  
     <select name="VarA" id="VarA">
@@ -50,7 +87,7 @@
     <input name="submit" type="submit" id="submit" value="submit"> <br>  
   </form>
   
-  <h2>This is another form</h2>
+  <h2>Select All Gene Mutations</h2>
   <form name='gene_list' method='get' action='./genemt_query.cgi'>
     <input type="checkbox" name="display" id="display" value="display">
     <label for="display"> Display all the Genes</label><br>
@@ -58,7 +95,7 @@
   </form>
  
   
-  <p>I'd like to thank sponsers ... </p>
+  <p>The end.  Thanks for playing ... </p>
   
 </div>
 </body>
