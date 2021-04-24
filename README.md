@@ -20,5 +20,5 @@ http://bfx3.aap.jhu.edu/ksteenb1/final/index.html
 For any bugs or operational problems, please open an issue here on [Github](https://github.com/KSteenbergen/programming_final_project).
  
 ## Acknowledgements
-  GISAID for access to the annotated, official reference genome of hCoV -19.  https://www.gisaid.org/
+  GISAID for access to the annotated, official reference genome of hCoV -19.  https://www.gisaid.org/  
   PANGO lineage for publishing a list of distinguishing mutations for each variant of concern. https://cov-lineages.org/
