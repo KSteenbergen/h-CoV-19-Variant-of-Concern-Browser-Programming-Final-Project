@@ -36,8 +36,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -56,12 +55,12 @@
             </table>
         </div>
           
-        <div>
+        <div class = "content">
             <table name = "ORF1AB">
             <tr>
                 <th>Variant</th>
                 <th>Country of Origin</th> 
-                <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                <th>Mutation Type</th>
                 <th>Event</th>
             </tr>
             {% for entry in gene_mutations if entry.gene=='ORF1AB' %}
@@ -81,8 +80,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -101,12 +99,12 @@
             </table>
         </div>
 
-        <div>
+        <div class = "content">
             <table name = "Spike">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='Spike' %}
@@ -126,8 +124,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -146,12 +143,12 @@
             </table>
         </div>
 
-        <div>
+        <div class = "content">
             <table name = "ORF3">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='ORF3' %}
@@ -171,8 +168,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -191,12 +187,12 @@
             </table>
         </div>
 
-        <div>
+        <div class = "content">
             <table name = "E">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='E' %}
@@ -216,8 +212,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -236,12 +231,12 @@
             </table>
         </div>
 
-        <div>
+        <div class = "content">
             <table name = "M">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='M' %}
@@ -261,8 +256,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -281,12 +275,12 @@
             </table>
         </div> 
 
-        <div>
+        <div class = "content">
             <table name = "ORF6">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='ORF6' %}
@@ -306,8 +300,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -326,12 +319,12 @@
             </table>
         </div>
         
-        <div>  
+        <div class = "content">  
             <table name = "ORF7A">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='ORF7A' %}
@@ -351,8 +344,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -371,12 +363,12 @@
             </table>
         </div>
           
-        <div>
+        <div class = "content">
             <table name = "ORF7B">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='ORF7B' %}
@@ -396,8 +388,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -416,12 +407,12 @@
             </table>
         </div>
          
-        <div>
+        <div class = "content">
             <table name = "ORF8">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='ORF8' %}
@@ -441,8 +432,7 @@
                 <tr>
                     <th>Gene</th>
                     <th>Alternative name</th> 
-                    <th>loci (blank one - or span 2 columns</th>
-                    <th></th>
+                    <th colspan='2'>Locus</th>
                     <th>Gene Length (nt)</th>
                     <th>Protein Product</th>
                     <th>Polypeptide Length (aa)</th> 
@@ -461,12 +451,12 @@
             </table>
         </div>
           
-        <div>
+        <div class = "content">
             <table name = "N">
                 <tr>
                     <th>Variant</th>
                     <th>Country of Origin</th> 
-                    <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+                    <th>Mutation Type</th>
                     <th>Event</th>
                 </tr>
                 {% for entry in gene_mutations if entry.gene=='N' %}

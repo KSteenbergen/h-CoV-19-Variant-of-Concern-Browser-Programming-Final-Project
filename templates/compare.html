@@ -21,16 +21,19 @@
         Probabily will remove the table style line
     If time, would like to display some sort of graphic
     Can possibly include some info on specific mutations (like EEK) 
+    Describe Mutation type - deleted description from table header
+    NO IMAGES OR COLOURS YET
+    Explain why some genes say'various'
 
   </p><br>
 
-  <label for="shared_mutations"> Shared Mutations:</label><br>
-    <table style="width:50%", id="shared_table">
+  <label for="shared_mutations" id="shared_label"> Shared Mutations:</label><br>
+  <table id="shared_table">
     <tr>
         <th>Gene</th> 
         <th>Protein Product</th>
         <th>Protein Length</th>
-        <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
+        <th>Mutation Type</th>
         <th>Event</th> 
     </tr>
     {% for entry in shared_list %}
@@ -43,47 +46,52 @@
     </tr>
     {% endfor %}
 
-    </table><br><br>
+  </table><br><br>
     
-    <label for="compare_tableA"> A: Distinguishing Mutations found in {{ variantA }} first identified in {{ countryA }}</label><br>
-    <table style="width:50%", id="compare_tableA">
-    <tr>
-        <th>Gene</th> 
-        <th>Protein Product</th>
-        <th>Protein Length</th>
-        <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
-        <th>Event</th> 
-    </tr>
-    {% for entry in varA_list %}
-    <tr>
-        <td>{{ entry.gene }}</td>
-        <td>{{ entry.product }}</td>
-        <td>{{ entry.aa_length }}</td>
-        <td>{{ entry.mutation }}</td>
-        <td>{{ entry.event }}</td>
-    </tr>
-    {% endfor %}
-    </table><br>
-
-    <label for="compare_tableB"> B: Distinguishing Mutations found in {{ variantB }} first identified in {{ countryB }}</label><br>
-    <table style="width:50%", id="compare_tableB">
-    <tr>
-        <th>Gene</th> 
-        <th>Protein Product</th>
-        <th>Protein Length</th>
-        <th>Type of mutation (dd=deletion, aa=amino acid replacement)</th>
-        <th>Event</th> 
-    </tr>
-    {% for entry in varB_list %}
-    <tr>
-        <td>{{ entry.gene }}</td>
-        <td>{{ entry.product }}</td>
-        <td>{{ entry.aa_length }}</td>
-        <td>{{ entry.mutation }}</td>
-        <td>{{ entry.event }}</td>
-    </tr>
-    {% endfor %}
-    </table><br>
+    <div class='row'> 
+        <div class="column">
+            <label for="compare_tableA" id="compareA_label"> Distinguishing Mutations found in {{ variantA }} first identified in {{ countryA }}</label><br>
+            <table id="compare_tableA">
+            <tr>
+                <th>Gene</th> 
+                <th>Protein Product</th>
+                <th>Protein Length</th>
+                <th>Mutation Type</th>
+                <th>Event</th> 
+            </tr>
+            {% for entry in varA_list %}
+            <tr>
+                <td>{{ entry.gene }}</td>
+                <td>{{ entry.product }}</td>
+                <td>{{ entry.aa_length }}</td>
+                <td>{{ entry.mutation }}</td>
+                <td>{{ entry.event }}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </div>
+        <div class="column">
+            <label for="compare_tableB" id="compareB_label"> Distinguishing Mutations found in {{ variantB }} first identified in {{ countryB }}</label><br>
+            <table id="compare_tableB">
+            <tr>
+                <th>Gene</th> 
+                <th>Protein Product</th>
+                <th>Protein Length</th>
+                <th>Mutation Type</th>
+                <th>Event</th> 
+            </tr>
+            {% for entry in varB_list %}
+            <tr>
+                <td>{{ entry.gene }}</td>
+                <td>{{ entry.product }}</td>
+                <td>{{ entry.aa_length }}</td>
+                <td>{{ entry.mutation }}</td>
+                <td>{{ entry.event }}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
 
     
 </body>

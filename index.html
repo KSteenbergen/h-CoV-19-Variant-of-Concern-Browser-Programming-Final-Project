@@ -7,20 +7,22 @@
   
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel=”stylesheet” href=”https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css”>
+
   <script type="text/javascript" src="js/main.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
 
 
-  <!-- Change this out for CSS and JS as needed -->
-  <link rel="stylesheet" type="text/css" href="css/search_product.css" />
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-
-  <!-- This would be the header and information -->
+  <!-- This would be the header and information
+    <img src="genome-covid19.jpg" alt="DNA photo" height=250px width=100%> -->
   <h1>h-CoV-19 Variants of Concern Browser</h1>
   <p>
       Insert some awesome text here about how to run, and maybe some intro information
@@ -31,44 +33,62 @@
       Can delete other form when ready. 
       Another issue is to not allow for the same variant to be selected twice.
   </p>
-  <h3>Form to Compare two Variants:</h3>
+  <h2>Form to Compare two Variants:</h2>
   <form name="tester" method ='post' action='./compare_query.cgi'>
     <div class="widget">
       <fieldset>
-        <legend>Select a Variant: </legend>
-        <label for="B.1.1.7">B.1.1.7 (UK)</label>
-        <input type="radio" name="VarA" id="B.1.1.7" value="B.1.1.7">
-        <label for="P.1">P.1 (Brazil)</label>
-        <input type="radio" name="VarA" id="P.1" value="P.1">
-        <label for="B.1.351">B.1.351 (South Africa)</label>
-        <input type="radio" name="VarA" id="B.1.351" value= "B.1.351">
-        <label for="B.1.525">B.1.525 (Botswana)</label>
-        <input type="radio" name="VarA" id="B.525" value= "B.1.525">
-        <label for="A.23.1">A.23.1 (Multiple)</label>
-        <input type="radio" name="VarA" id="A.23.1" value= "A.23.1">
+        <legend class="legend_label">Select a Variant: </legend>
+        <div class="variant">
+          <label for="B.1.1.7" id="tag">B.1.1.7 (UK)</label>
+          <input type="radio" name="VarA" id="B.1.1.7" value="B.1.1.7">
+        </div>
+        <div class="variant">
+          <label for="P.1">P.1 (Brazil)</label>
+          <input type="radio" name="VarA" id="P.1" value="P.1">
+        </div>
+        <div class="variant">
+          <label for="B.1.351">B.1.351 (South Africa)</label>
+          <input type="radio" name="VarA" id="B.1.351" value= "B.1.351">
+        </div>
+        <div class="variant">
+          <label for="B.1.525">B.1.525 (Botswana)</label>
+          <input type="radio" name="VarA" id="B.525" value= "B.1.525">
+        </div>
+        <div class="variant">
+          <label for="A.23.1">A.23.1 (Multiple)</label>
+          <input type="radio" name="VarA" id="A.23.1" value= "A.23.1">
+        </div>
       </fieldset>
       <fieldset>
-        <legend>Select a Comparison Variant: </legend>
-        <label for="B.1.1.7">B.1.1.7 (UK)</label>
-        <input type="radio" name="VarB" id="B.1.1.7" value="B.1.1.7">
-        <label for="P.1">P.1 (Brazil)</label>
-        <input type="radio" name="VarB" id="P.1" value="P.1">
-        <label for="B.1.351">B.1.351 (South Africa)</label>
-        <input type="radio" name="VarB" id="B.1.351" value= "B.1.351">
-        <label for="B.1.525">B.1.525 (Botswana)</label>
-        <input type="radio" name="VarB" id="B.525" value= "B.1.525">
-        <label for="A.23.1">A.23.1 (Multiple)</label>
-        <input type="radio" name="VarB" id="A.23.1" value= "A.23.1">
+        <legend class="legend_label">Select a Comparison Variant: </legend>
+        <div class="variant">
+          <label for="B.1.1.7" id="tag">B.1.1.7 (UK)</label>
+          <input type="radio" name="VarB" id="B.1.1.7" value="B.1.1.7">
+        </div>
+        <div class="variant">
+          <label for="P.1">P.1 (Brazil)</label>
+          <input type="radio" name="VarB" id="P.1" value="P.1">
+        </div>
+        <div class="variant">
+          <label for="B.1.351">B.1.351 (South Africa)</label>
+          <input type="radio" name="VarB" id="B.1.351" value= "B.1.351">
+        </div>
+        <div class="variant">
+          <label for="B.1.525">B.1.525 (Botswana)</label>
+          <input type="radio" name="VarB" id="B.525" value= "B.1.525">
+        </div>
+        <div class="variant">
+          <label for="A.23.1">A.23.1 (Multiple)</label>
+          <input type="radio" name="VarB" id="A.23.1" value= "A.23.1">
+        </div>
       </fieldset>
-      <input name="submit" type="submit" id="submit" value="submit"> <br>
+      <input name="submit" type="submit" id="submit" value="Submit"> <br>
     </div>
   </form>
   
-  <!-- This would include the form elements
-            What would you like to do:  Compare or Show all genes? -->
-  <h3>This is the old form that works - remove when comfortable</h3>
-  <form name="var_compare" method ='post' action='./compare_query.cgi'>
-    <!-- Will probably need to change the values for the query? -->
+  <!-- OLD FORM - CAN REMOVE IF NEED BE  
+    <h3>This is the old form that works - remove when comfortable</h3>
+    <form name="var_compare" method ='post' action='./compare_query.cgi'>
     <label for="VarA"> Choose two variants to compare:</label><br>  
     <select name="VarA" id="VarA">
         <option value="B.1.1.7">B.1.1.7 (UK)</option>
@@ -77,27 +97,28 @@
         <option value="A.23.1">A.23.1 (Multiple)</option>
         <option value="B.1.525">B.1.525 (Botswana)</option>
     </select>
-
+  
+ 
     <select name="VarB" id="VarB">
         <option value="B.1.1.7">B.1.1.7 (UK)</option>
         <option value="B.1.351">B.1.351 (South Africa)</option>
         <option value="P.1">P.1 (Brazil)</option>
         <option value="A.23.1">A.23.1 (Multiple)</option>
         <option value="B.1.525">B.1.525 (Botswana)</option>
-     </select>
+     </select><br>
     <input name="submit" type="submit" id="submit" value="submit"> <br>  
   </form>
-  
-  <h2>Select All Gene Mutations</h2>
-  <form name='gene_list' method='get' action='./genemt_query.cgi'>
+  -->
+
+
+  <h2>Select All Gene Mutations:</h2>
+  <form name='gene_list' id="gene_list" method='get' action='./genemt_query.cgi'>
     <input type="checkbox" name="display" id="display" value="display">
     <label for="display"> Display all the Genes</label><br>
-    <input name="submit" type="submit" id="submit" value="Submit"><br><br>
+    <input name="submit" type="submit" id="submit" value="Submit">
   </form>
  
-  
-  <p>The end.  Thanks for playing ... </p>
-  
+
 </div>
 </body>
 

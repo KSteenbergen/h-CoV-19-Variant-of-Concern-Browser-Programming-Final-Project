@@ -9,5 +9,5 @@ $(document).ready(function(){
     }); 
     $(".widget").checkboxradio({
         icon: false
-    })
+    });
 });

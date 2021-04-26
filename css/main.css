@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Muli");
+
+
+h1, h2, h3{
+    font-family:'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+p{
+    font-family: 'Muli', Arial, sans-serif;
+    font-size: .875em;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    margin: 10px;
+}
+
+th{
+    font-family: 'Muli', Arial, sans-serif;
+    font-size: .95em;
+    border: 1px solid rgb(150,150,150);
+    padding: 5px;
+}
+
+td{
+    font-family: 'Muli', Arial, sans-serif;
+    font-size: .85em;
+    border: 1px solid rgb(150,150,150);
+    padding: 5px;
+}
+
+/*
+#This css is specifically for the compare.html template
+*/
+#shared_table{
+    width: 80%;
+    font-family: 'Muli', Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shared_label, #compareA_label, #compareB_label{
+    font-family:'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: 300;
+}
+/* This is to set up side-by-side tables */
+*{
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+
+/*
+#This css is specifically for the index.html template
+*/
+form{
+    font-family:'Muli', Arial, sans-serif;
+    font-size: .85em;
+    font-weight: 300;
+    width: 80%;
+}
+/*
+.ui-checkboxradio-radio-label{
+    font-family:'Muli', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+}
+*/
+.legend_label{
+    font-family:'Muli', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 3px;
+}
+.variant{
+    font-family:'Muli', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    border: 1px solid rgb(150,150,150);
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+    margin: 2px;
+    background:rgba(143, 188, 143, 0.6);
+}
+fieldset{
+    display: flex;
+    justify-content: space-between;
+}
+#gene_list{
+    margin: 5px;
+    font-size: 1em;
+    
+}
+#submit{
+    padding: 5px;
+    margin: 5px;
+}
+img{
+    height: 250 px;
+    max-width: 50%;
+    
+}
+body{
+    background-color: #ffffff;
+    background-image: url('COVID.jpg');
+    background-position: bottom;
+}
