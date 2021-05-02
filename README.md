@@ -1,4 +1,4 @@
-# hCoV-19 Variant of Concern Browser
+# h-CoV-19 Variant of Concern Browser
 #### 410.712 Final Project
 ## Introduction
   

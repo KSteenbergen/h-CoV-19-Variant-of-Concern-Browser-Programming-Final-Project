@@ -14,6 +14,11 @@ env = jinja2.Environment(loader=templateLoader)
 template = env.get_template('compare.html')          
 
 def main():
+    #Create an error message if the variants chosen are the same (Avoids 500 error)
+    if varA == varB:
+        err = "Try Again: Choose two DIFFERENT variants to compare"
+        return err
+
     shared_mt = []
     varA_list = []
     varB_list = []
@@ -47,8 +52,8 @@ def main():
             elif unique_dict.get('variant') == varB:
                 varB_list.append(unique_dict)
                 countryB = unique_dict.get('country')
-    #Return values needed to populate HTML file          
-    return shared_mt, varA_list, varB_list, varA, varB,  countryA, countryB
+    #Return values needed to populate template file          
+    return shared_mt, varA_list, varB_list, varA, varB, countryA, countryB
 
     conn.commit()
     curs.close()
@@ -56,7 +61,12 @@ def main():
 if __name__ == '__main__':
     results_list = main()
 
+err = "Try Again: Choose two DIFFERENT variants to compare"
+
 print("Content-Type: text/html\n\n")
-print(template.render(shared_list = results_list[0], varA_list = results_list[1], 
+if results_list == err:
+    print(template.render(message = results_list))
+else:
+    print(template.render(shared_list = results_list[0], varA_list = results_list[1], 
 varB_list = results_list[2], variantA = results_list[3], variantB = results_list[4],
 countryA = results_list[5], countryB = results_list[6]))

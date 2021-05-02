@@ -1,4 +1,4 @@
-// run our javascript once the page is ready
+// run the javascript once the page is ready
 $(document).ready(function(){
     $( "#accordion" ).accordion({
         collapsible: true,

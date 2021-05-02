@@ -5,30 +5,27 @@
   <meta charset="utf-8">
   <title>Gene Results</title>
   
-  
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
  
-
-  <!-- Change this out for CSS and JS as needed -->
   <link rel="stylesheet" type="text/css" href="css/search_product.css" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
-
 <body>
     <h1>Display of Genes and their Mutations</h1>
-    <p>This includes a tables that are populated for each gene  - Same query - different filtering.
-        JQuery UI - Accordian table drop down - may need to add names to each table row. 
-        I'd like the headers to be frozen and only the bottom portion open up.
-        Will probably need to add identifiers for the different elements for CSS
-        Change Alternative name to be "Alternative Gene Name"
-        Include information about how to click and display the info
-        Also include information that mutation type legend (dd or aa) and their meaning
-    </p><br>
-    
+    <ul>      
+        <li><b>Click on the genes below to display the variant mutations.</b></li>
+        <li>Note that there are many mutations found on any given h-CoV-19 virus, these are specifically the <i>distinguishing</i>
+        mutations that identify variants of concern.</li>
+        <li>The 'Mutation Type' is denoted with 'aa' for amino acid replacement or 'del' for 
+        nucleotide deletion.  </li>
+        <li>Polypeptide length is denoted as 'various' when there are alternate protein lengths depending on 
+            proteolytic cleavage. </li>
+     </ul>
+   
     <div id="accordion">
         <div class = "header"> 
             <h3>ORF1AB Gene</h3>
@@ -71,7 +68,7 @@
                 <td>{{ entry.event }}</td>
             </tr>
             {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class="header">
@@ -115,7 +112,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class = "header">
@@ -159,7 +156,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class="header">
@@ -203,7 +200,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div> 
 
         <div class= "header">  
@@ -247,7 +244,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
         
         <div class= "header">
@@ -291,7 +288,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
         
         <div class= "header">
@@ -335,7 +332,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class= "header">
@@ -379,7 +376,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class= "header">
@@ -423,7 +420,7 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
 
         <div class= "header">
@@ -467,10 +464,8 @@
                     <td>{{ entry.event }}</td>
                 </tr>
                 {% endfor %}
-            </table><br>
+            </table>
         </div>
     </div>
-
-    <p>New variants coming to a database near you!</p>
 </body>
 </html>

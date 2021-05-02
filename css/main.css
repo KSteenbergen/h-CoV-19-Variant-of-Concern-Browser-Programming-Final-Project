@@ -6,34 +6,39 @@ h1, h2, h3{
     padding: 5px;
 }
 
-p{
+p, ul{
     font-family: 'Muli', Arial, sans-serif;
     font-size: .875em;
 }
-
 table{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px;
     margin: 10px;
+    background-color:rgba(255, 255, 255, 0.78);
 }
-
 th{
     font-family: 'Muli', Arial, sans-serif;
     font-size: .95em;
     border: 1px solid rgb(150,150,150);
     padding: 5px;
 }
-
 td{
     font-family: 'Muli', Arial, sans-serif;
     font-size: .85em;
     border: 1px solid rgb(150,150,150);
     padding: 5px;
 }
-
+body{
+    background-color: white;
+    background-image: url("COVID.jpg");
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
 /*
-#This css is specifically for the compare.html template
+#For the compare.html template
 */
 #shared_table{
     width: 80%;
@@ -41,12 +46,19 @@ td{
     margin-left: auto;
     margin-right: auto;
 }
-
+.error{
+    margin: 2px;
+    padding: 2px;
+}
 #shared_label, #compareA_label, #compareB_label{
     font-family:'Merriweather', Georgia, 'Times New Roman', Times, serif;
-    font-size: 1em;
+    font-size: .90em;
     font-weight: 300;
 }
+#compare_tableB{
+    background-color:rgba(255, 255, 255, 0.78);
+}
+
 /* This is to set up side-by-side tables */
 *{
     box-sizing: border-box;
@@ -61,22 +73,19 @@ td{
     padding: 5px;
 }
 
+
 /*
-#This css is specifically for the index.html template
+For index.html
 */
+#course{
+    font-size: .75em;
+}
 form{
     font-family:'Muli', Arial, sans-serif;
     font-size: .85em;
     font-weight: 300;
     width: 80%;
 }
-/*
-.ui-checkboxradio-radio-label{
-    font-family:'Muli', sans-serif;
-    font-size: 3em;
-    font-weight: 300;
-}
-*/
 .legend_label{
     font-family:'Muli', Arial, sans-serif;
     font-size: 1em;
@@ -100,20 +109,9 @@ fieldset{
 }
 #gene_list{
     margin: 5px;
-    font-size: 1em;
-    
+    font-size: 1em;  
 }
 #submit{
     padding: 5px;
     margin: 5px;
-}
-img{
-    height: 250 px;
-    max-width: 50%;
-    
-}
-body{
-    background-color: #ffffff;
-    background-image: url('COVID.jpg');
-    background-position: bottom;
 }

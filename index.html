@@ -4,36 +4,35 @@
 <head>
   <meta charset="utf-8">
   <title>h-CoV-19 Variant Browser</title>
-  
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+  <script type="text/javascript" src="js/main.js"></script>
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel=”stylesheet” href=”https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css”>
-
-  <script type="text/javascript" src="js/main.js"></script>
-  
-  
   <link rel="stylesheet" type="text/css" href="css/main.css" />
-
-
-
 </head>
 
 <body>
-  <!-- This would be the header and information
-    <img src="genome-covid19.jpg" alt="DNA photo" height=250px width=100%> -->
   <h1>h-CoV-19 Variants of Concern Browser</h1>
-  <p>
-      Insert some awesome text here about how to run, and maybe some intro information
-      This can include a little background on COVID and the Variants of Concern (VOC)
-      How they were chosen, time stamp, etc. 
-      Also, some instructions on how to use.
-      jQuery widget that could be included for added interactivity - want no icons - not working I dont't like how the circles are behind the option  
-      Can delete other form when ready. 
-      Another issue is to not allow for the same variant to be selected twice.
+  <p class="intro" id="course"> <i>This application was developed as a final project for course 410.712 Advanced Practical Computer Concepts for Bioinformatics.</i></p>
+  <p class="intro">
+    The h-CoV-19 virus emerged in December 2019.  Since then it has rapidly spread around the globe acquiring mutations and leading to the 
+    development of viral variants.  Some of these variants are classified as "Variants of Concern" due to their increased transmissibility, 
+    antibody evasion, and increased disease severity.  This application functions to display the distinguishing mutations found in the current 
+    variants of concern.
   </p>
-  <h2>Form to Compare two Variants:</h2>
+  <p class="intro"><b>Use the forms below to explore the distinguishing mutations found in h-CoV-19 Variants of Concern.</b></p>
+  <p class="intro">
+    <ul>
+      <li>Data can be displayed in one of two ways: two variants can be selected for comparison, or all the genes may be selected to view the mutations
+    found on each.</li>
+      <li>Due to the ever-evolving nature of this pandemic, this tool displays the latest mutations and variants as of 
+    the timestamp at the bottom.</li>
+      <li>The variants are denoted using their PANGO nomenclature, but countries of origin will be referenced as well.</li>
+    </ul> 
+  </p>
+  <h2>Side-by-side Variant Comparison:</h2>
   <form name="tester" method ='post' action='./compare_query.cgi'>
     <div class="widget">
       <fieldset>
@@ -86,40 +85,15 @@
     </div>
   </form>
   
-  <!-- OLD FORM - CAN REMOVE IF NEED BE  
-    <h3>This is the old form that works - remove when comfortable</h3>
-    <form name="var_compare" method ='post' action='./compare_query.cgi'>
-    <label for="VarA"> Choose two variants to compare:</label><br>  
-    <select name="VarA" id="VarA">
-        <option value="B.1.1.7">B.1.1.7 (UK)</option>
-        <option value="B.1.351">B.1.351 (South Africa)</option>
-        <option value="P.1">P.1 (Brazil)</option>
-        <option value="A.23.1">A.23.1 (Multiple)</option>
-        <option value="B.1.525">B.1.525 (Botswana)</option>
-    </select>
-  
- 
-    <select name="VarB" id="VarB">
-        <option value="B.1.1.7">B.1.1.7 (UK)</option>
-        <option value="B.1.351">B.1.351 (South Africa)</option>
-        <option value="P.1">P.1 (Brazil)</option>
-        <option value="A.23.1">A.23.1 (Multiple)</option>
-        <option value="B.1.525">B.1.525 (Botswana)</option>
-     </select><br>
-    <input name="submit" type="submit" id="submit" value="submit"> <br>  
-  </form>
-  -->
-
-
-  <h2>Select All Gene Mutations:</h2>
+  <h2>Display all Gene Mutations:</h2>
   <form name='gene_list' id="gene_list" method='get' action='./genemt_query.cgi'>
     <input type="checkbox" name="display" id="display" value="display">
-    <label for="display"> Display all the Genes</label><br>
+    <label for="display"> Gene-level Display</label><br>
     <input name="submit" type="submit" id="submit" value="Submit">
   </form>
- 
-
-</div>
+<p>
+  <i>Application last updated May 1, 2021</i>
+</p>
 </body>
 
 </html>
