@@ -8,7 +8,7 @@ This application allows a user to explore genetic information about hCoV-19 Vari
   * A side-by-side comparison of two variants showing shared and unique mutations.
   * A gene-level display of all the variant mutations found on each of the genes.
  
-Due to the ever-evolving nature of this virus, this tool displays the most common 5 variants as of April 23, 2021.  The variants are denoted using their PANGO nomenclature, but countries of origin will be referenced as well (ex. "B.1.1.7(UK)").
+  Due to the ever-evolving nature of this virus, this tool displays the most common 5 variants as of April 23, 2021.  The variants are denoted using their PANGO nomenclature, but countries of origin will be referenced as well (ex. "B.1.1.7(UK)").
  
 ## Usage:
 This application requires users to be connected to the JHU bioinformatics server.  
