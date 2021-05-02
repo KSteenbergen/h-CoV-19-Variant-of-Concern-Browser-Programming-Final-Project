@@ -2,7 +2,7 @@
 #### 410.712 Final Project
 ## Introduction
   
-This application allows a user to explore genetic information about hCoV-19 Variants of Concern displaying various mutations with genome annotations.  A database containing the hCoV-19 genetic information as well as distinguishing mutations is used to provide the display data.
+This application allows a user to explore genetic information about hCoV-19 Variants of Concern displaying various mutations with genome annotations.  A database containing the hCoV-19 genetic information, as well as distinguishing mutations, is used to provide the display data.
  
   This tool can be used in one of two ways:
   * A side-by-side comparison of two variants showing shared and unique mutations.
